@@ -68,10 +68,6 @@ function ProfitTable({ chitAmount }) {
   
   const calculatedProfits = calculateProfitsWithCarryForward(profits);
 
-  useEffect(() => {
-    fetchProfits();
-  }, [chitAmount]);
-
   const fetchProfits = async () => {
     try {
       const response = await fetch(`http://localhost:3001/api/profits?chitAmount=${chitAmount}`);
@@ -81,6 +77,10 @@ function ProfitTable({ chitAmount }) {
       console.error('Error fetching profits:', error);
     }
   };
+
+  useEffect(() => {
+    fetchProfits();
+  }, [chitAmount]);
 
   const handleAddProfit = async (e) => {
     e.preventDefault();

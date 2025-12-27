@@ -19,54 +19,53 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
-  DialogActions
+  DialogActions,
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { toast } from 'react-toastify';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import { green, red } from '@mui/material/colors';
 import { formatCurrencyWithRupee, testRupeeSupport } from '../utils/pdfFonts';
 import { loadRupeeFont } from '../utils/rupeeFont';
 
 // Helper function to convert number to words (for amount in words)
-const numberToWords = (num) => {
-  // Implementation of number to words conversion
-  // This is a simplified version - you might want to use a library for production
-  const single = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
-  const double = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
-  const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
-  const formatTens = (num) => {
-    if (num < 10) return single[num];
-    if (num < 20) return double[num - 10];
-    return tens[Math.floor(num / 10)] + (num % 10 ? ' ' + single[num % 10] : '');
-  };
+// const numberToWords = (num) => {
+//   // Implementation of number to words conversion
+//   // This is a simplified version - you might want to use a library for production
+//   const single = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+//   const double = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+//   const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+//   const formatTens = (num) => {
+//     if (num < 10) return single[num];
+//     if (num < 20) return double[num - 10];
+//     return tens[Math.floor(num / 10)] + (num % 10 ? ' ' + single[num % 10] : '');
+//   };
 
-  if (num === 0) return 'Zero';
+//   if (num === 0) return 'Zero';
   
-  let result = '';
-  if (num >= 10000000) {
-    result += formatTens(Math.floor(num / 10000000)) + ' Crore ';
-    num %= 10000000;
-  }
-  if (num >= 100000) {
-    result += formatTens(Math.floor(num / 100000)) + ' Lakh ';
-    num %= 100000;
-  }
-  if (num >= 1000) {
-    result += formatTens(Math.floor(num / 1000)) + ' Thousand ';
-    num %= 1000;
-  }
-  if (num >= 100) {
-    result += single[Math.floor(num / 100)] + ' Hundred ';
-    num %= 100;
-  }
-  if (num > 0) {
-    result += formatTens(num);
-  }
+//   let result = '';
+//   if (num >= 10000000) {
+//     result += formatTens(Math.floor(num / 10000000)) + ' Crore ';
+//     num %= 10000000;
+//   }
+//   if (num >= 100000) {
+//     result += formatTens(Math.floor(num / 100000)) + ' Lakh ';
+//     num %= 100000;
+//   }
+//   if (num >= 1000) {
+//     result += formatTens(Math.floor(num / 1000)) + ' Thousand ';
+//     num %= 1000;
+//   }
+//   if (num >= 100) {
+//     result += single[Math.floor(num / 100)] + ' Hundred ';
+//     num %= 100;
+//   }
+//   if (num > 0) {
+//     result += formatTens(num);
+//   }
   
-  return result.trim() + ' Rupees Only';
-};
+//   return result.trim() + ' Rupees Only';
+// };
 
 function ChitList({ chits, customers, onFilter, onDeleteChit }) {
   const [selectedCustomer, setSelectedCustomer] = useState('');
@@ -99,117 +98,117 @@ function ChitList({ chits, customers, onFilter, onDeleteChit }) {
   };
 
   // Function to get profit for a specific month
-  const getProfitForMonth = async (chitAmount, monthYear) => {
-    try {
-      const response = await fetch(`http://localhost:3001/api/profits?chitAmount=${chitAmount}`);
-      const allProfits = await response.json();
+  // const getProfitForMonth = async (chitAmount, monthYear) => {
+  //   try {
+  //     const response = await fetch(`http://localhost:3001/api/profits?chitAmount=${chitAmount}`);
+  //     const allProfits = await response.json();
       
-      // Find profit for the specific month
-      const monthProfit = allProfits.find(p => {
-        const profitMonth = new Date(p.month).toLocaleString('default', { 
-          month: 'long', 
-          year: 'numeric' 
-        });
-        return profitMonth === monthYear;
-      });
+  //     // Find profit for the specific month
+  //     const monthProfit = allProfits.find(p => {
+  //       const profitMonth = new Date(p.month).toLocaleString('default', { 
+  //         month: 'long', 
+  //         year: 'numeric' 
+  //       });
+  //       return profitMonth === monthYear;
+  //     });
       
-      return monthProfit ? parseFloat(monthProfit.amount) : 0;
-    } catch (error) {
-      console.error('Error fetching profit data:', error);
-      return 0;
-    }
-  };
+  //     return monthProfit ? parseFloat(monthProfit.amount) : 0;
+  //   } catch (error) {
+  //     console.error('Error fetching profit data:', error);
+  //     return 0;
+  //   }
+  // };
 
   // Function to calculate profit and carry forward
-  const calculateProfitAndCarryForward = async (chitAmount, monthYear) => {
-    try {
-      // Fetch profit data for the specific month and chit amount
-      const response = await fetch(`http://localhost:3001/api/profits?chitAmount=${chitAmount}`);
-      const allProfits = await response.json();
+  // const calculateProfitAndCarryForward = async (chitAmount, monthYear) => {
+  //   try {
+  //     // Fetch profit data for the specific month and chit amount
+  //     const response = await fetch(`http://localhost:3001/api/profits?chitAmount=${chitAmount}`);
+  //     const allProfits = await response.json();
       
-      // Find profit for the specific month (monthYear is in format like "December 2024")
-      const monthProfit = allProfits.find(p => {
-        const profitMonth = new Date(p.month).toLocaleString('default', { 
-          month: 'long', 
-          year: 'numeric' 
-        });
-        return profitMonth === monthYear;
-      });
+  //     // Find profit for the specific month (monthYear is in format like "December 2024")
+  //     const monthProfit = allProfits.find(p => {
+  //       const profitMonth = new Date(p.month).toLocaleString('default', { 
+  //         month: 'long', 
+  //         year: 'numeric' 
+  //       });
+  //       return profitMonth === monthYear;
+  //     });
       
-      // Use actual profit from table or 0 if not found
-      const profit = monthProfit ? parseFloat(monthProfit.amount) : 0;
+  //     // Use actual profit from table or 0 if not found
+  //     const profit = monthProfit ? parseFloat(monthProfit.amount) : 0;
       
-      // Store current carry forward value (from previous month's result after -50,000)
-      const previousCarryForward = window.currentCarryForward || 0;
+  //     // Store current carry forward value (from previous month's result after -50,000)
+  //     const previousCarryForward = window.currentCarryForward || 0;
       
-      // Calculate new total including previous carry forward and current profit
-      const newTotal = previousCarryForward + profit;
+  //     // Calculate new total including previous carry forward and current profit
+  //     const newTotal = previousCarryForward + profit;
       
-      // Calculate result after -50,000 deduction
-      const resultAfterDeduction = newTotal - 50000;
+  //     // Calculate result after -50,000 deduction
+  //     const resultAfterDeduction = newTotal - 50000;
       
-      // Store this result for next month's carry forward
-      window.currentCarryForward = Math.max(0, resultAfterDeduction);
+  //     // Store this result for next month's carry forward
+  //     window.currentCarryForward = Math.max(0, resultAfterDeduction);
       
-      console.log('Carry forward calculation:', {
-        monthYear,
-        previousCarryForward,
-        profit,
-        newTotal,
-        resultAfterDeduction,
-        storedCarryForward: window.currentCarryForward
-      });
+  //     console.log('Carry forward calculation:', {
+  //       monthYear,
+  //       previousCarryForward,
+  //       profit,
+  //       newTotal,
+  //       resultAfterDeduction,
+  //       storedCarryForward: window.currentCarryForward
+  //     });
       
-      return {
-        profit: profit.toFixed(2),
-        carryForward: resultAfterDeduction.toFixed(2)
-      };
-    } catch (error) {
-      console.error('Error fetching profit data:', error);
-      // Fallback to 0 if there's an error
-      return {
-        profit: '0.00',
-        carryForward: '0.00'
-      };
-    }
-  };
+  //     return {
+  //       profit: profit.toFixed(2),
+  //       carryForward: resultAfterDeduction.toFixed(2)
+  //     };
+  //   } catch (error) {
+  //     console.error('Error fetching profit data:', error);
+  //     // Fallback to 0 if there's an error
+  //     return {
+  //       profit: '0.00',
+  //       carryForward: '0.00'
+  //     };
+  //   }
+  // };
 
   // Function to fetch PAATA data
-  const fetchPaataData = async (chitAmount) => {
-    try {
-      console.log('Fetching PAATA data for chitAmount:', chitAmount); // Debug log
+  // const fetchPaataData = async (chitAmount) => {
+  //   try {
+  //     console.log('Fetching PAATA data for chitAmount:', chitAmount); // Debug log
       
-      const response = await fetch(`http://localhost:3001/api/paata?chitAmount=${chitAmount}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+  //     const response = await fetch(`http://localhost:3001/api/paata?chitAmount=${chitAmount}`, {
+  //       method: 'GET',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
       
-      console.log('PAATA API response status:', response.status); // Debug log
+  //     console.log('PAATA API response status:', response.status); // Debug log
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+  //     if (!response.ok) {
+  //       throw new Error(`HTTP error! status: ${response.status}`);
+  //     }
       
-      const data = await response.json();
-      console.log('PAATA data received:', data); // Debug log
+  //     const data = await response.json();
+  //     console.log('PAATA data received:', data); // Debug log
       
-      // Ensure we have an array, even if empty
-      if (!Array.isArray(data)) {
-        console.warn('PAATA API did not return an array, using empty array');
-        return [];
-      }
+  //     // Ensure we have an array, even if empty
+  //     if (!Array.isArray(data)) {
+  //       console.warn('PAATA API did not return an array, using empty array');
+  //       return [];
+  //     }
       
-      return data;
-    } catch (error) {
-      console.error('Error fetching paata data:', error);
-      console.log('Server might not be running. Returning empty array'); // Debug log
+  //     return data;
+  //   } catch (error) {
+  //     console.error('Error fetching paata data:', error);
+  //     console.log('Server might not be running. Returning empty array'); // Debug log
       
-      // Return empty array instead of fallback data
-      return [];
-    }
-  };
+  //     // Return empty array instead of fallback data
+  //     return [];
+  //   }
+  // };
 
   const downloadPDF = async () => {
     console.log('PDF download started');

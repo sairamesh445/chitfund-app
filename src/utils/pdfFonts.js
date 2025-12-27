@@ -1,5 +1,5 @@
 // PDF Font utilities for rupee symbol support
-import jsPDF from 'jspdf';
+// import jsPDF from 'jspdf';
 
 // Method 1: Using Noto Sans (recommended)
 export const addNotoSansFont = (doc) => {

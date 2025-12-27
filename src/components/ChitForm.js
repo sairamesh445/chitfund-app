@@ -65,7 +65,7 @@ function ChitForm({ customers, chitAmount, onAddChit }) {
     if (formData.customerId && !filtered.some(c => c.id === formData.customerId)) {
       setFormData(prev => ({ ...prev, customerId: '' }));
     }
-  }, [customers, chitAmount]);
+  }, [customers, chitAmount, formData.customerId]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

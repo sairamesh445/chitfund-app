@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { CssBaseline, Container, AppBar, Toolbar, Typography, Tabs, Tab, Box, Snackbar, Alert, Button, IconButton } from '@mui/material';
+import { CssBaseline, Container, AppBar, Toolbar, Typography, Tabs, Tab, Box, Snackbar, Alert, IconButton } from '@mui/material';
 import CustomerForm from './components/CustomerForm';
 import CustomerList from './components/CustomerList';
 import ChitForm from './components/ChitForm';
@@ -15,10 +15,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Generate unique hash for customer data
-const generateCustomerHash = (customer) => {
-  const data = `${customer.name.trim().toLowerCase()}_${customer.phone.trim()}_${customer.chitAmount}`;
-  return btoa(data).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
-};
+// const generateCustomerHash = (customer) => {
+//   const data = `${customer.name.trim().toLowerCase()}_${customer.phone.trim()}_${customer.chitAmount}`;
+//   return btoa(data).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
+// };
 
 // Check for exact duplicate customer (more precise check)
 const isExactDuplicateCustomer = (newCustomer, existingCustomers) => {
@@ -30,10 +30,10 @@ const isExactDuplicateCustomer = (newCustomer, existingCustomers) => {
 };
 
 // Generate unique hash for chit data
-const generateChitHash = (chit) => {
-  const data = `${chit.customerId}_${chit.amount}_${chit.date}_${chit.accountDetails.trim()}`;
-  return btoa(data).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
-};
+// const generateChitHash = (chit) => {
+//   const data = `${chit.customerId}_${chit.amount}_${chit.date}_${chit.accountDetails.trim()}`;
+//   return btoa(data).replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
+// };
 
 // Global submission tracking system
 const submissionTracker = {

@@ -23,10 +23,6 @@ function PaataTable({ chitAmount }) {
   const [month, setMonth] = useState(new Date());
   const [amount, setAmount] = useState('');
 
-  useEffect(() => {
-    fetchPaata();
-  }, [chitAmount]);
-
   const fetchPaata = async () => {
     try {
       console.log('Fetching PAATA data for chitAmount:', chitAmount);
@@ -81,6 +77,10 @@ function PaataTable({ chitAmount }) {
       setPaata([]);
     }
   };
+
+  useEffect(() => {
+    fetchPaata();
+  }, [chitAmount]);
 
   const handleAddPaata = async (e) => {
     e.preventDefault();
