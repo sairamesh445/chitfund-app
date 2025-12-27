@@ -1,0 +1,197 @@
+{
+  "customers": [
+    {
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli, Uppalaguptam Mandal",
+      "phone": "8978663787",
+      "chitAmount": "10L",
+      "id": "1765873358627"
+    },
+    {
+      "name": "Veerendra Prakash Ganisetti",
+      "address": "2-11, Sannavilli, Uppalaguptam Mandal, Andhra Pradesh-India, Near Padipoyina Vanthena",
+      "phone": "8978663787",
+      "chitAmount": "10L",
+      "id": "1765964248034",
+      "hash": "dmVlcmVuZHJhIHBy",
+      "submissionTimestamp": 1765964247988,
+      "createdAt": "2025-12-17T09:37:28.034Z"
+    }
+  ],
+  "chits": [
+    {
+      "customerId": "1765873358627",
+      "amount": 5600,
+      "date": "2025-12-02",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873662237"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 5678,
+      "date": "2025-12-03",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873676365"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 3456,
+      "date": "2025-12-04",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873690005"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 5678,
+      "date": "2025-12-05",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873703677"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 5678,
+      "date": "2025-12-06",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873718230"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 8800,
+      "date": "2025-12-07",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873765667"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 8900,
+      "date": "2025-12-08",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873783172"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 6788,
+      "date": "2025-12-09",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873791492"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 5678,
+      "date": "2025-12-10",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873808975"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 5677,
+      "date": "2026-01-01",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873855349"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 4321,
+      "date": "2026-01-02",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873868140"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 7899,
+      "date": "2026-01-03",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873879797"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 6789,
+      "date": "2026-01-04",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873911842"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 8000,
+      "date": "2026-01-05",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873952059"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 9000,
+      "date": "2026-01-06",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873969900"
+    },
+    {
+      "customerId": "1765873358627",
+      "amount": 6754,
+      "date": "2026-01-07",
+      "accountDetails": "9866119919",
+      "chitAmount": "10L",
+      "id": "1765873977883"
+    }
+  ],
+  "profits": [
+    {
+      "id": "1765873829300",
+      "chitAmount": "10L",
+      "month": "2026-01",
+      "amount": 8999,
+      "date": "2025-12-16T08:30:29.297Z"
+    },
+    {
+      "id": "1765964506665",
+      "chitAmount": "10L",
+      "month": "2025-12",
+      "amount": 5677,
+      "date": "2025-12-17T09:41:46.658Z"
+    },
+    {
+      "id": "1766811442263",
+      "chitAmount": "10L",
+      "month": "2025-02",
+      "amount": 4600,
+      "date": "2025-12-27T04:57:22.233Z"
+    }
+  ],
+  "paata": [
+    {
+      "chitAmount": "10L",
+      "month": "2025-12",
+      "amount": 900,
+      "date": "2025-12-16T13:30:09.517Z",
+      "id": "1765891809517"
+    },
+    {
+      "chitAmount": "10L",
+      "month": "2026-01",
+      "amount": 9000,
+      "date": "2025-12-16T13:31:19.310Z",
+      "id": "1765891879310"
+    },
+    {
+      "chitAmount": "10L",
+      "month": "2026-04",
+      "amount": 3444,
+      "date": "2025-12-27T04:57:47.244Z",
+      "id": "1766811467244"
+    }
+  ]
+}

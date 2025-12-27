@@ -1,0 +1,142 @@
+/* Main App Styling */
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.MuiAppBar-root {
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.MuiTabs-indicator {
+  background-color: #fff !important;
+  height: 3px !important;
+}
+
+.MuiTab-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  min-width: 120px !important;
+}
+
+.MuiTab-root.Mui-selected {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* Container Styling */
+.MuiContainer-root {
+  padding: 20px !important;
+  flex: 1;
+}
+
+/* Card Styling */
+.MuiPaper-root {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form Styling */
+.MuiTextField-root, .MuiFormControl-root {
+  margin-bottom: 16px !important;
+}
+
+.MuiInputBase-input, .MuiOutlinedInput-input, .MuiInputLabel-root {
+  font-size: 0.95rem !important;
+}
+
+/* Button Styling */
+.MuiButton-contained {
+  text-transform: none !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  padding: 10px 24px !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-containedPrimary {
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%) !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table Styling */
+.MuiTableContainer-root {
+  border-radius: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.MuiTableHead-root {
+  background-color: #f5f7fa;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  font-weight: 600 !important;
+  color: #2c3e50;
+  background-color: #e3f2fd;
+}
+
+.MuiTableRow-root:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.MuiTableRow-root:hover {
+  background-color: #f1f5fe !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding: 10px !important;
+  }
+  
+  .MuiTab-root {
+    min-width: auto !important;
+    padding: 12px 8px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #90caf9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64b5f6;
+}

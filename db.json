@@ -1,0 +1,151 @@
+{
+  "customers": [
+    {
+      "id": "1765956864587",
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli\nUppalaguptam Mandal",
+      "phone": "08978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765957446066,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli, Uppalaguptam Mandal",
+      "phone": "8978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765959146072,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli, Uppalaguptam Mandal",
+      "phone": "8978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765962374309,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli, Uppalaguptam Mandal",
+      "phone": "8978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765962607990,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli\nUppalaguptam Mandal",
+      "phone": "08978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765962798587,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli\nUppalaguptam Mandal",
+      "phone": "08978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765963003314,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli\nUppalaguptam Mandal",
+      "phone": "08978663787",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765963973089,
+      "name": "Sri Venkata Sai Ramesh Ganisetti",
+      "address": "1-18,Kalavagattu ,Sannavilli\nUppalaguptam Mandal",
+      "phone": "08978663787",
+      "chitAmount": "10L",
+      "hash": "c3JpIHZlbmthdGEg"
+    }
+  ],
+  "chits": [
+    {
+      "id": 1765957455425,
+      "customerId": 1765957446066,
+      "amount": 56000,
+      "date": "2025-12-17",
+      "accountDetails": "AAAAAAAAAAAAAA",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765957468826,
+      "customerId": 1765957446066,
+      "amount": 67000,
+      "date": "2026-01-02",
+      "accountDetails": "AAAAAAAAAAAAAA",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765959161659,
+      "customerId": 1765959146072,
+      "amount": 59000,
+      "date": "2025-12-17",
+      "accountDetails": "AAAAAAAAAAAAAAAAAAAA",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765959174088,
+      "customerId": 1765959146072,
+      "amount": 65000,
+      "date": "2026-01-01",
+      "accountDetails": "AAAAAAAAAAAAAAAAA",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765962050895,
+      "customerId": 1765959146072,
+      "amount": 333333333333,
+      "date": "2025-12-17",
+      "accountDetails": "AAAAAAAAAAAAAA",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765962381516,
+      "customerId": 1765962374309,
+      "amount": 45666,
+      "date": "2025-12-17",
+      "accountDetails": "AAAAAA",
+      "chitAmount": "10L"
+    },
+    {
+      "id": 1765963030809,
+      "customerId": "1765956864587",
+      "amount": 33,
+      "date": "2025-12-17",
+      "accountDetails": "33",
+      "chitAmount": "10L"
+    }
+  ],
+  "profits": [
+    {
+      "id": 1765957534440,
+      "chitAmount": "10L",
+      "month": "2025-12",
+      "amount": 6700,
+      "date": "2025-12-17T07:45:34.441Z"
+    },
+    {
+      "id": 1765957570904,
+      "chitAmount": "10L",
+      "month": "2026-01",
+      "amount": 6788,
+      "date": "2025-12-17T07:46:10.904Z"
+    }
+  ],
+  "paata": [
+    {
+      "id": "0df6",
+      "chitAmount": "10L",
+      "month": "2025-12",
+      "amount": 6777,
+      "date": "2025-12-17T07:43:26.784Z"
+    },
+    {
+      "id": "5977",
+      "chitAmount": "10L",
+      "month": "2026-01",
+      "amount": 7800,
+      "date": "2025-12-17T07:44:38.617Z"
+    }
+  ]
+}
