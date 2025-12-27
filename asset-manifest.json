@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/chitfund-app/static/css/main.bece469a.css",
+    "main.js": "/chitfund-app/static/js/main.c24112f7.js",
+    "static/js/239.0eb4474d.chunk.js": "/chitfund-app/static/js/239.0eb4474d.chunk.js",
+    "static/js/213.ce73e266.chunk.js": "/chitfund-app/static/js/213.ce73e266.chunk.js",
+    "static/js/455.594c44fd.chunk.js": "/chitfund-app/static/js/455.594c44fd.chunk.js",
+    "index.html": "/chitfund-app/index.html",
+    "main.bece469a.css.map": "/chitfund-app/static/css/main.bece469a.css.map",
+    "main.c24112f7.js.map": "/chitfund-app/static/js/main.c24112f7.js.map",
+    "239.0eb4474d.chunk.js.map": "/chitfund-app/static/js/239.0eb4474d.chunk.js.map",
+    "213.ce73e266.chunk.js.map": "/chitfund-app/static/js/213.ce73e266.chunk.js.map",
+    "455.594c44fd.chunk.js.map": "/chitfund-app/static/js/455.594c44fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bece469a.css",
+    "static/js/main.c24112f7.js"
+  ]
+}
