@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Table, 
   TableBody, 
@@ -68,7 +68,7 @@ function ProfitTable({ chitAmount }) {
   
   const calculatedProfits = calculateProfitsWithCarryForward(profits);
 
-  const fetchProfits = async () => {
+  const fetchProfits = useCallback(async () => {
     try {
       const response = await fetch(`http://localhost:3001/api/profits?chitAmount=${chitAmount}`);
       const data = await response.json();
@@ -76,11 +76,11 @@ function ProfitTable({ chitAmount }) {
     } catch (error) {
       console.error('Error fetching profits:', error);
     }
-  };
+  }, [chitAmount]);
 
   useEffect(() => {
     fetchProfits();
-  }, [chitAmount]);
+  }, [fetchProfits]);
 
   const handleAddProfit = async (e) => {
     e.preventDefault();

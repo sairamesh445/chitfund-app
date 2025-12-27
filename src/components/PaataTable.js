@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Table, 
   TableBody, 
@@ -23,7 +23,7 @@ function PaataTable({ chitAmount }) {
   const [month, setMonth] = useState(new Date());
   const [amount, setAmount] = useState('');
 
-  const fetchPaata = async () => {
+  const fetchPaata = useCallback(async () => {
     try {
       console.log('Fetching PAATA data for chitAmount:', chitAmount);
       
@@ -76,11 +76,11 @@ function PaataTable({ chitAmount }) {
       // Set empty array instead of fallback data
       setPaata([]);
     }
-  };
+  }, [chitAmount]);
 
   useEffect(() => {
     fetchPaata();
-  }, [chitAmount]);
+  }, [fetchPaata]);
 
   const handleAddPaata = async (e) => {
     e.preventDefault();

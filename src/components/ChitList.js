@@ -25,7 +25,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { toast } from 'react-toastify';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import { formatCurrencyWithRupee, testRupeeSupport } from '../utils/pdfFonts';
+import { testRupeeSupport } from '../utils/pdfFonts';
 import { loadRupeeFont } from '../utils/rupeeFont';
 
 // Helper function to convert number to words (for amount in words)
