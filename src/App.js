@@ -229,8 +229,8 @@ function App() {
           
           const [customersRes, chitsRes] = await Promise.race([
             Promise.all([
-              fetch(`http://localhost:3001/api/customers?chitAmount=${chitAmount}`),
-              fetch(`http://localhost:3001/api/chits?chitAmount=${chitAmount}`)
+              fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/api/customers?chitAmount=${chitAmount}`),
+              fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/api/chits?chitAmount=${chitAmount}`)
             ]),
             timeoutPromise
           ]);
